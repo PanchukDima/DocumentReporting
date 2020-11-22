@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/images/icons">
+        <file>images/justify.png</file>
+        <file>images/Left.png</file>
+        <file>images/Listalbom.png</file>
+        <file>images/ListPortate.png</file>
+        <file>images/print.png</file>
+        <file>images/Right.png</file>
+        <file>images/save.png</file>
+        <file>images/Settings.png</file>
+    </qresource>
+</RCC>
