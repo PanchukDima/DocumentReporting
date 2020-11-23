@@ -111,20 +111,28 @@ void MainWindow::saveDocument()
 void MainWindow::cursorStateUpdate()
 {
 
+
 }
 void MainWindow::appendTable()
 {
-    cursor->insertTable(1,1);
+    QTextCursor cur = w->textCursor();
+    cur.insertTable(1,1);
 
 }
 void MainWindow::appendColumnTable()
 {
-    QTextTable * table = cursor->currentTable();
-    table->insertColumns(table->columns(),1);
+    QTextCursor cur = w->textCursor();
+    QTextTable * table = cur.currentTable();
+
+    //table->insertColumns(table->columns(),1);
+    qDebug()<<cur.positionInBlock();
+    table->appendColumns(1);
 }
 void MainWindow::appendRowTable()
 {
-    QTextTable * table = cursor->currentTable();
-    table->insertRows(table->rows(),1);
+    QTextCursor cur = w->textCursor();
+    QTextTable * table = cur.currentTable();
+    //table->insertRows(table->rows(),1);
+    table->appendRows(1);
 }
 
